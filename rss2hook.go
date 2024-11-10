@@ -257,7 +257,7 @@ func notify(hook string, item *gofeed.Item) error {
 func main() {
 
 	// Parse the command-line flags
-	config := "./sample.cfg"
+	config := flag.String("config", "", "The path to the configuration-file to read")
 	timeout := flag.Duration("timeout", 5*time.Second, "The timeout used for fetching the remote feeds")
 	flag.Parse()
 
